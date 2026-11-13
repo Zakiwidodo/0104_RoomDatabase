@@ -5,13 +5,13 @@ plugins {
 }
 
 android {
-    namespace = "com.example.act7"
+    namespace = "com.example.activity7"
     compileSdk {
         version = release(37)
     }
 
     defaultConfig {
-        applicationId = "com.example.act7"
+        applicationId = "com.example.activity7"
         minSdk = 24
         targetSdk = 37
         versionCode = 1
