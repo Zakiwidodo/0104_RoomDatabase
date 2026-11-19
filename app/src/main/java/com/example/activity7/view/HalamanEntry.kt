@@ -10,7 +10,6 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Button
 import androidx.compose.material3.Divider
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
@@ -24,8 +23,8 @@ import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.lifecycle.viewmodel.compose.viewModel
+import androidx.room.util.copy
 import com.example.activity7.R
-import com.example.activity7.uicontroller.DestinasiEntry
 import com.example.activity7.uicontroller.DestinasiNavigasi
 import com.example.activity7.uicontroller.SiswaTopAppBar
 import com.example.activity7.viewmodel.DetailSiswa
@@ -34,6 +33,10 @@ import com.example.activity7.viewmodel.PenyediaViewModel
 import com.example.activity7.viewmodel.UIStateSiswa
 import kotlinx.coroutines.launch
 
+object DestinasiEntry: DestinasiNavigasi {
+    override val route = "item_entry"
+    override val titleRes = R.string.entry_siswa
+}
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -96,7 +99,6 @@ fun EntrySiswaBody(
         }
     }
 }
-
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun FormInputSiswa(
@@ -141,9 +143,9 @@ fun FormInputSiswa(
                 modifier = Modifier.padding(start = dimensionResource(id = R.dimen.padding_medium))
             )
         }
-        HorizontalDivider(
+        Divider(
             thickness = dimensionResource(R.dimen.padding_small),
-            modifier = Modifier.padding(bottom = dimensionResource(id = R.dimen.padding_medium))
+            modifier = Modifier.padding(bottom = dimensionResource(R.dimen.padding_medium))
         )
     }
 }
