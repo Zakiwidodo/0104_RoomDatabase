@@ -1,6 +1,7 @@
 package com.example.activity7.view.route
 
 import com.example.activity7.R
+import com.example.activity7.uicontroller.DestinasiNavigasi
 
 object DestinasiEditSiswa : DestinasiNavigasi {
     override val route = "item_edit"
